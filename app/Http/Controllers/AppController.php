@@ -14,6 +14,7 @@ class AppController extends Controller
             'title' => 'Book List',
             'books' => Book::all(),
             'categories' => Category::all(),
+            'publisher' => null,
         ]);
     }
 
@@ -30,6 +31,7 @@ class AppController extends Controller
             'title' => $category->name,
             'books' => $category->books,
             'categories' => Category::all(),
+            'publisher' => null,
         ]);
     }
 

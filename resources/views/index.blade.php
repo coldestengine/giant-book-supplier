@@ -6,7 +6,18 @@
 
 @section('content')
 <div class="row d-flex justify-content-center">
+
+  @if($title == 'Publisher Detail')
+  <div class="row text-white bg-secondary lh-1 pt-3 mb-3">
+    <p class="fs-6">{{ $publisher->name }}</p>
+    <p class="fs-6">Address - {{ $publisher->address }}</p>
+    <p class="fs-6">Phone - {{ $publisher->phone }}</p>
+    <p class="fs-6">Email - {{ $publisher->email }}</p>
+  </div>
+  @else
   <p class="fs-2 bg-secondary text-white">{{ $title }}</p>
+
+  @endif
 
   <div class="row d-flex justify-content-center">
     @if ($books->count())
